@@ -1,0 +1,226 @@
+body {
+    padding: 7vh 15vh;  
+    background-color: #E3E3E3;
+    font-family: sans-serif;
+}
+
+
+#main{
+    display: flex;
+}
+
+.mainDivs {
+    flex: 1;
+}
+
+.info {
+    padding: 5vh 3vh;    
+    background-color: white;
+    color: #343434;
+}
+
+.form {
+    padding: 2.5vh 3vh;
+    margin: -3vh 0 -3vh 0;
+    background-color: rgb(71, 162, 223);
+    color: white;
+}
+
+@media (max-width: 1024px){
+    body{
+        padding: 2vh;
+    }
+    
+    #main{
+       flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px){
+    body{
+        padding: 3vh 5vh;
+    }
+}
+
+label, form p{
+    font-weight: bold;
+}
+
+.inputText {
+    width: 90%;
+    padding: 1.5vh;
+    margin-bottom: 3vh;
+    border: none;
+    font-size: large;
+}
+
+.inputWithError {
+    color: #BF3B4D;
+}
+
+.half {
+    width: 40% !important;
+}
+
+.emptyField{
+    display: none;
+    max-width: 80%;
+    margin-top: -4vh;
+    padding: 3vh 2vh 2vh 2vh;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    font-weight: bold;
+    background-color: #FDCCD2;
+    color: #BF3B4D;
+}
+
+#loading{
+    display: none;
+    height: 10vh;
+    background-image: url(https://www.freeiconspng.com/uploads/spinner-icon-0.gif);
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#recipientsTop{
+    display: none;
+}
+
+#recipientsDetail{
+    display: none;
+}
+
+#recipients p{
+    font-weight: normal;
+}
+
+#expandRecipients, #minimizeRecipients{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#img1{
+    width: 10vh;
+    height: 10vh;
+    background-position: 50%;
+    background-image: url(https://d3ngej33o625dx.cloudfront.net/Images/Photos/FL/S/Gillibrand_Kirsten_248345.jpg);
+    background-size: 98%;
+    border-radius: 50%;
+    margin-bottom: 2vh;
+}
+
+#img2{
+    width: 10vh;
+    height: 10vh;
+    background-position: 50%;
+    background-image: url(https://d3ngej33o625dx.cloudfront.net/Images/Photos/FL/S/Schumer_Charles_165260.jpg);
+    background-size: 98%;
+    border-radius: 50%;
+}
+
+.senatorDetail{
+    display: flex;
+}
+
+.senatorName{
+    padding: 2vh;
+}
+
+textarea{
+    width: 93%;
+    padding: 1vh;
+    margin-bottom: 4vh;
+    border: none;
+}
+
+#closing{
+    line-height: 4vh;
+    font-weight: bold;
+}
+
+.gradient {
+    width: 100%;
+    min-height: 10vh;
+    padding: 2vh;
+    margin: 5vh 0;
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    background-image: linear-gradient(gray, black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0s
+}
+
+.buttonLoading {
+    width: 100%;
+    min-height: 10vh;
+    padding: 2vh;
+    margin: 5vh 0;
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    background-image: url(https://www.freeiconspng.com/uploads/spinner-icon-0.gif);
+    border: none;
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0s
+}
+
+.gradient:hover{
+    width: 100%;
+    padding: 2vh;
+    margin: 5vh 0;
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    background-image: linear-gradient(black, gray);
+    border: none;
+    border-radius: 5px;
+}
+
+#emoji{
+    height: 20vh;    
+}
+
+.bounce{
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce{
+    0% {
+        transform: scale(3);
+    }
+    25% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    75% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer{
+    padding: 5vh;
+    clear: both;
+    text-align: center;
+    font-size: 80%;
+}
+
+footer a{
+    color: black
+}

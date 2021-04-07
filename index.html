@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>This is the call to action headline!</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://www.saashub.com/images/app/service_logos/23/dcd2de2dd6fe/large.png?1546980764"/>
+
+</head>
+<body>
+    <input type="hidden" name="assessment" id="assessment">
+    <div id="main">
+        <div class="info mainDivs">
+            <h1>This is the call to action headline!</h1>
+            <p>This is the campaign description. It should inspire your advocates to take action!</p>
+        </div>
+        <div class="form mainDivs">
+            <h2>Send an email to your officials with one click!</h2>
+            <form onsubmit="myFunction()">
+                <div>
+                    <label>Title</label><br>
+                    <select class="half inputsValidate inputText" name="title" id="title">
+                        <option value="">Title</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mx.">Mx.</option>
+                        <option value="Dr.">Dr.</option>
+                        <option value="ADM">ADM</option>
+                        <option value="Ambassador">Ambassador</option>
+                        <option value="BGEN">BGEN</option>
+                        <option value="Bishop">Bishop</option>
+                        <option value="Brother">Brother</option>
+                        <option value="CAPT">CAPT</option>
+                        <option value="Capt.">Capt.</option>
+                        <option value="Captain">Captain</option>
+                        <option value="Cardinal">Cardinal</option>
+                        <option value="CDR">CDR</option>
+                        <option value="Chaplain">Chaplain</option>
+                        <option value="CMSgt">CMSgt</option>
+                        <option value="COL">COL</option>
+                        <option value="Colonel">Colonel</option>
+                        <option value="Congressman">Congressman</option>
+                        <option value="CPT">CPT</option>
+                        <option value="Del.">Del.</option>
+                        <option value="Drs.">Drs.</option>
+                        <option value="Fr.">Fr.</option>
+                        <option value="GEN">GEN</option>
+                        <option value="Gov.">Gov.</option>
+                        <option value="Honorable">Honorable</option>
+                        <option value="Imam">Imam</option>
+                        <option value="Judge">Judge</option>
+                        <option value="LCDR">LCDR</option>
+                        <option value="LGEN">LGEN</option>
+                        <option value="LT">LT</option>
+                        <option value="Lt Gen">Lt Gen</option>
+                        <option value="LTC">LTC</option>
+                        <option value="LTG">LTG</option>
+                        <option value="MAJ">MAJ</option>
+                        <option value="Maj Gen">Maj Gen</option>
+                        <option value="MajGen">MajGen</option>
+                        <option value="Master">Master</option>
+                        <option value="MG">MG</option>
+                        <option value="Miss">Miss</option>
+                        <option value="MSG">MSG</option>
+                        <option value="MSgt">MSgt</option>
+                        <option value="Prof.">Prof.</option>
+                        <option value="Rabbi">Rabbi</option>
+                        <option value="RADM">RADM</option>
+                        <option value="Rector">Rector</option>
+                        <option value="Rep.">Rep.</option>
+                        <option value="Rev.">Rev.</option>
+                        <option value="Senator">Senator</option>
+                        <option value="SFC">SFC</option>
+                        <option value="SGM">SGM</option>
+                        <option value="SGT">SGT</option>
+                        <option value="SgtMaj">SgtMaj</option>
+                        <option value="Sister">Sister</option>
+                        <option value="SSG">SSG</option>
+                        <option value="SSgt">SSgt</option>
+                        <option value="The Hon.">The Hon.</option>
+                        <option value="The Rt. Rev.">The Rt. Rev.</option>
+                        <option value="The Very Reverend">The Very Reverend</option>
+                        <option value="VADM">VADM</option>
+                    </select>
+                    <p class="emptyField">Please select your title</p>
+                    <br>
+                </div>
+                
+                <div>
+                    <label>Your full name</label><br>
+                    <input class="inputText inputsValidate" type="text" name="fullName" id="fullName">
+                    <p class="emptyField">Please enter your full name</p>
+                    <br>                    
+                </div>
+                
+                <div>
+                    <label>Street address</label><br>
+                    <input class="inputText inputsValidate" type="text" name="streetAdress" id="streetAdress">
+                    <p class="emptyField">Please enter your street address</p>
+                    <br>
+                </div>
+                
+                <div>
+                    <label>Zip code</label><br>
+                    <input class="inputText inputsValidate half" type="number" name="zipCode" id="zipCode"> <span id="notRequired">city and state not required</span>
+                    <p class="emptyField">Please enter your 5 digit zip code</p>
+                    <br>
+                </div>
+
+                <div>
+                    <label>Phone number</label><br>
+                    <input class="inputText inputsValidate" type="text" name="phoneNumber" id="phoneNumber">
+                    <p class="emptyField">Please enter a valid phone number</p>
+                    <br>
+                </div>
+                
+                <div>
+                    <label>Email address</label><br>
+                    <input class="inputText inputsValidate" type="text" name="emailAddress" id="emailAddress">
+                    <p class="emptyField">Please enter a valid email address</p>
+                    <br>
+                </div>
+                
+                <button type="submit" id="sendEmailButton" class="gradient">Send Email</button>
+
+                <div id="recipients">
+                    <div id="loading"></div>
+                    <div id="recipientsTop">
+                        <p>Dear Sen. Gillibrand <span id="expandRecipients" onclick="toggleRecipients()">(and 1 other)</span>,</p>
+                    </div>
+                    <div id="recipientsDetail">
+                        <div class="senatorDetail">
+                            <div class="img" id="img1"></div>
+                            <div class="senatorName"><b>Sen. Kirsten Gillibrand</b><br>D-NY</div>
+                        </div>
+                        <div class="senatorDetail">
+                            <div class="img" id="img2"></div>
+                            <div class="senatorName"><b>Sen. Charles Schumer</b><br>D-NY</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Enter your message</p>
+                <textarea name="emailMessage" id="emailMessage" cols="30" rows="7" placeholder="This is a test message"></textarea>
+                
+                <div id="closing"></div>
+
+                <br>
+                <input type="checkbox" name="sendEmails" id="sendEmails" checked> <label>Send me emails about this campaign</label>
+                <br>
+                <input type="checkbox" name="sendTextMessage" id="sendTextMessage" checked> <label>Send me text messages about this campaign</label>
+
+            </form>
+        </div>
+    </div>
+
+
+    <footer>Ⓒ 2021. All rights reserved. Subject to <a href="https://phone2action.com/privacy-policy/" target="_blank">Privacy Policy</a>.</footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
